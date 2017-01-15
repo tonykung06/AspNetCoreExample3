@@ -1,0 +1,10 @@
+﻿@model AspNetCoreExample3.Models.Game
+<h1>Add Game to List</h1>
+<hr />
+<form asp-action="Create" asp-controller="Game">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <label asp-for="Description"></label>
+    <input asp-for="Description" />
+    <input type="submit" value="Add" />
+</form>

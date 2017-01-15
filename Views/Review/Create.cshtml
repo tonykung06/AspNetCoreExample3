@@ -1,0 +1,13 @@
+﻿@model AspNetCoreExample3.Models.Review
+@{ 
+    var gameName = ViewData["Game"];
+}
+<h1>Add Review to @gameName</h1>
+<hr />
+<form asp-action="Create" asp-controller="Review" asp-route-gamename="@gameName">
+    <label asp-for="Rating"></label>
+    <input asp-for="Rating" />
+    <label asp-for="Comments"></label>
+    <input asp-for="Comments" />
+    <input type="submit" value="Add" />
+</form>

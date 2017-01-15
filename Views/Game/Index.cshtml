@@ -1,0 +1,10 @@
+﻿@model List<AspNetCoreExample3.Models.Game>
+<h1>Game Reviewer</h1>
+<a asp-area="" asp-controller="Game" asp-action="Create">Add a Games</a>
+<ul>
+    @foreach(var game in Model)
+    {
+        <li>@game.Name (Rating: @game.Rating) - <a asp-action="Create" asp-controller="Review" asp-route-gamename="@game.Name">Add Review</a></li>
+    }
+</ul>
+
